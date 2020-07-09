@@ -133,7 +133,8 @@ let headers = {
   amount: "amount",
 };
 
-exportBtn.addEventListener("click", () => {
+exportBtn.addEventListener("click", (e) => {
+  e.preventDefault();
   convertToCSV(entries);
   exportCSVFile(headers, entries, "Monthly-Expenses");
 });
