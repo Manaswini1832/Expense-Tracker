@@ -142,6 +142,7 @@ exportBtn.addEventListener("click", (e) => {
 });
 
 //Magically expanding textarea
+//Codepen reference for the magically expanding textarea: https://codepen.io/tomhodgins/pen/KgazaE
 var comfyText = (function () {
   var tag = document.querySelectorAll("textarea");
   for (var i = 0; i < tag.length; i++) {
