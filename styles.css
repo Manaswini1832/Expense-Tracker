@@ -85,14 +85,16 @@ body {
 }
 
 .history-container {
+  min-width: 100%;
   overflow-x: auto;
-  margin: 10px;
+  padding: 30px;
 }
 
-table {
-  min-width: 100%;
+.history-table {
+  margin: 10px;
   text-align: center;
   color: #fff;
+  margin: 0 auto;
 }
 
 th,
