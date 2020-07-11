@@ -9,13 +9,13 @@
 body {
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  background-color: #1d2630;
 }
 
 .container {
   width: 100vw;
   min-height: 100vh;
   background-color: #1d2630;
-  padding: 3vmin;
 }
 
 .heading,
@@ -23,6 +23,11 @@ body {
   text-align: center;
   color: #fff;
   margin: 2vmin 15px 5vmin 15px;
+}
+
+.instructions {
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 .add-container {
@@ -38,7 +43,7 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: #343f4c;
-  padding: 10vmin;
+  padding: 5vmin;
 }
 
 .add-form label {
@@ -57,6 +62,7 @@ body {
 .add-form input:focus,
 .add-form textarea:focus {
   outline: none;
+  padding: 2vmin;
 }
 
 .add-btn,
@@ -94,11 +100,10 @@ body {
 .history-container {
   min-width: 100%;
   overflow-x: auto;
-  padding: 30px;
 }
 
 .history-table {
-  margin: 10px;
+  padding: 1vw;
   text-align: center;
   color: #fff;
   margin: 0 auto;
@@ -116,4 +121,8 @@ tr:nth-child(odd) {
 
 tr:nth-child(even) {
   background-color: #343f4c;
+}
+
+.expenses-div {
+  margin: 0 auto;
 }
