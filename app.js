@@ -5,7 +5,11 @@ let amount = document.querySelector(".amount-input");
 let to = document.querySelector(".to-input");
 let note = document.querySelector(".note-input");
 let date = document.querySelector(".date-input");
+const fullTable = document.querySelector(".history-table");
 const table = document.querySelector(".history-table tbody");
+
+//This array has all the entries stored. Fetches from local storage or falls back on the empty array
+const entries = JSON.parse(localStorage.getItem("expenses")) || [];
 
 //Clearing records
 clearBtn.addEventListener("click", (e) => {
@@ -16,9 +20,6 @@ clearBtn.addEventListener("click", (e) => {
     row.remove();
   });
 });
-
-//This array has all the entries stored. Fetches from local storage or falls back on the empty array
-const entries = JSON.parse(localStorage.getItem("expenses")) || [];
 
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -76,6 +77,7 @@ entries.forEach((entry) => {
 
 //Export records as CSV
 //Reference for this export code: https://medium.com/@danny.pule/export-json-to-csv-file-using-javascript-a0b7bc5b00d2
+
 function convertToCSV(objArray) {
   var array = typeof objArray != "object" ? JSON.parse(objArray) : objArray;
   var str = "";
